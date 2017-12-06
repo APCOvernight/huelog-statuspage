@@ -1,0 +1,84 @@
+{
+  "name": "huelog-statuspage",
+  "version": "0.1.0",
+  "description": "HueStatus reporter that serves a web page with recent log events",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && nyc mocha",
+    "lint": "eslint *.js test/**/*.js && pug-lint **/*.pug",
+    "coverage": "nyc report --reporter=text-lcov | coveralls && nyc report --reporter=text-lcov | codeclimate-test-reporter",
+    "stryker": "stryker run"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "moment": "^2.19.3",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "apc-style": "^0.4.3",
+    "chai": "^4.1.2",
+    "codeclimate-test-reporter": "^0.5.0",
+    "coveralls": "^3.0.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "sinon": "^4.1.2",
+    "sinon-chai": "^2.14.0",
+    "stryker": "^0.15.4",
+    "stryker-api": "^0.11.0",
+    "stryker-html-reporter": "^0.11.2",
+    "stryker-javascript-mutator": "^0.2.3",
+    "stryker-mocha-framework": "^0.7.1",
+    "stryker-mocha-runner": "^0.10.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/APCOvernight/huelog-statuspage.git"
+  },
+  "keywords": [
+    "huestatus",
+    "philips",
+    "hue",
+    "status",
+    "light",
+    "log",
+    "status page"
+  ],
+  "author": "Ian Egner <https://twitter.com/ianegner>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/APCOvernight/huelog-statuspage/issues"
+  },
+  "homepage": "https://github.com/APCOvernight/huelog-statuspage#readme",
+  "nyc": {
+    "include": [
+      "index.js"
+    ],
+    "all": true,
+    "watermarks": {
+      "lines": [
+        90,
+        99
+      ],
+      "functions": [
+        90,
+        99
+      ],
+      "branches": [
+        90,
+        99
+      ],
+      "statements": [
+        90,
+        99
+      ]
+    },
+    "reporter": [
+      "clover",
+      "text",
+      "text-summary",
+      "html",
+      "cobertura"
+    ],
+    "cache": true
+  }
+}

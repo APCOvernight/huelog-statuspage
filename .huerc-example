@@ -1,0 +1,5 @@
+{
+  "name": "huelog-statuspage",
+  "logLevel": "info",
+  "port": 3131
+}

@@ -1,0 +1,17 @@
+html
+  include head.pug
+
+  body(class=lastLog.status)
+
+    main.grid-container
+      .grid-x
+        .cell
+          h1(class=lastLog.status)
+            span= lastLog.message
+            span.since= ' - ' + lastLog.formattedTimestamp
+        .cell.small-8.small-offset-2
+          ul
+            each log in logs
+              li(class=log.status)
+                span= log.message
+                span.since= ' - ' + log.formattedTimestamp

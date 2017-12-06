@@ -1,0 +1,75 @@
+head
+  title Hue Log Status Page
+
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css')
+  meta(http-equiv='refresh', content='10')
+
+  style(type='text/css').
+    @import url('https://fonts.googleapis.com/css?family=Lato|Rubik');
+
+    body {
+      color: #2D2D2D;
+      font-family: 'Lato', sans-serif;
+      padding-top: 35vh;
+    }
+
+    body.alert {
+      background-color: #F0341E;
+    }
+
+    body.ok {
+      background-color: #83B22B;
+    }
+
+    body.warning {
+      background-color: #F3C92E;
+    }
+
+    body.working {
+      background-color: #3C92CA;
+    }
+
+    body.alert, body.ok, body.warning, body.working {
+      color: white;
+    }
+
+    h1 {
+      font-family: 'Rubik', sans-serif;
+    }
+
+    h1::before,
+    li::before {
+      content: 'ℹ️ '
+    }
+
+    h1.alert::before,
+    li.alert::before {
+      content: '🚨 '
+    }
+
+    h1.ok::before,
+    li.ok::before {
+      content: '✅ '
+    }
+
+    h1.warning::before,
+    li.warning::before {
+      content: '⚠️ '
+    }
+
+    h1.working::before,
+    li.working::before {
+      content: '🏗 '
+    }
+
+    h1 {
+      margin-bottom: 60px;
+    }
+
+    li {
+      font-size: 20px;
+    }
+
+    .since {
+    opacity: .6;
+    }
