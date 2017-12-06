@@ -1,7 +1,7 @@
 {
   "name": "huelog-statuspage",
   "version": "0.1.0",
-  "description": "HueStatus reporter that serves a web page with recent log events",
+  "description": "Serve an HTML page displaying HueStatus logs",
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && nyc mocha",
