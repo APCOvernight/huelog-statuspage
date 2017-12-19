@@ -2,6 +2,7 @@
 
 const express = require('express')
 const moment = require('moment')
+const path = require('path')
 
 class StatusPage {
   constructor () {
@@ -17,6 +18,7 @@ class StatusPage {
     const port = this.config.port || 80
 
     this.server.set('view engine', 'pug')
+    this.server.set('views', path.join(__dirname, 'views'))
     this.server.get('/', (req, res) => this.getPage(res))
 
     await this.server.listen(port, () => console.info(`👂  Hue Log Status Page - Listening on port ${port}`))
