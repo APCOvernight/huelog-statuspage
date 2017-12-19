@@ -1,6 +1,6 @@
 {
   "name": "huelog-statuspage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Serve an HTML page displaying HueStatus logs",
   "main": "index.js",
   "scripts": {
