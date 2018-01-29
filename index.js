@@ -4,15 +4,20 @@ const express = require('express')
 const moment = require('moment')
 const path = require('path')
 
+/**
+ * HueStatus Reporter
+ */
 class StatusPage {
+  /**
+   * Define new express server
+   */
   constructor () {
     this.logs = []
     this.server = express()
   }
 
   /**
-   * Fire up the http server
-   * @return {Promise}
+   * Configure and fire up the http server
    */
   async start () {
     const port = this.config.port || 80

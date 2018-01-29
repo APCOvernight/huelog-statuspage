@@ -13,7 +13,7 @@ let listenStub
 let mockConfig
 let consoleStub
 
-describe('Status Page Server setup', function () {
+describe('Status Page Server setup', () => {
   beforeEach(() => {
     mockConfig = {
       port: 3000
@@ -78,7 +78,7 @@ describe('Status Page Server setup', function () {
   })
 })
 
-describe('Log manipulation', function () {
+describe('Log manipulation', () => {
   it('Log method pushes to log array', () => {
     instance = new StatusPage()
     expect(instance.logs).to.be.an('array')
