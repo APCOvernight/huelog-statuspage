@@ -15,7 +15,7 @@
     "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
-    "apc-style": "1.1.0",
+    "apc-style": "1.2.0",
     "apc-test": "1.1.0"
   },
   "repository": {
