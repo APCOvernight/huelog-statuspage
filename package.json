@@ -12,7 +12,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "moment": "^2.19.3",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.4"
   },
   "devDependencies": {
     "apc-style": "1.2.0",
